@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/src/Tipos.h
+
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/src/aed2_Mapa.h
+iostream
+-
+set
+-
+list
+-
+Tipos.h
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/src/Tipos.h
+
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/src/aed2_SimCity.cpp
+aed2_SimCity.h
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/src/aed2_SimCity.h
+
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/src/aed2_SimCity.h
+iostream
+-
+set
+-
+tuple
+-
+aed2_Mapa.h
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/src/aed2_Mapa.h
+

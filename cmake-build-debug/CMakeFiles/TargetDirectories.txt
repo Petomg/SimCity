@@ -1,0 +1,8 @@
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/cmake-build-debug/CMakeFiles/correrValgrindSimCity.dir
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/cmake-build-debug/CMakeFiles/gtest.dir
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/cmake-build-debug/CMakeFiles/correrValgrindMapa.dir
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/cmake-build-debug/CMakeFiles/correrTestsMapa.dir
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/cmake-build-debug/CMakeFiles/gtest_main.dir
+/home/yisus/Documentos/algo2/labo/2020-c1-tp3/cmake-build-debug/CMakeFiles/correrTestsSimCity.dir

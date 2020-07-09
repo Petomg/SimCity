@@ -1,0 +1,1 @@
+/usr/bin/c++   -pthread -std=gnu++11 -ggdb3 -g -g   CMakeFiles/correrTestsSimCity.dir/src/aed2_Mapa.cpp.o CMakeFiles/correrTestsSimCity.dir/src/aed2_SimCity.cpp.o CMakeFiles/correrTestsSimCity.dir/tests/simcity-tests.cpp.o  -o correrTestsSimCity  libgtest.a libgtest_main.a 
