@@ -79,9 +79,11 @@ Nat aed2_SimCity::nivel(Casilla c) const {
     Nat maxNivelDistancia3 = 0;
     Nat maxCasa = 0;
     Nat maxComercio = 0;
+    bool hayCasa = false;
     for(tuple<Casilla, Nat, bool> con : construcciones){
         if (get<0>(con) == c){
             if (!get<2>(con)){
+                hayCasa = true;
                 if (get<1>(con) > maxCasa){
                     maxCasa = get<1>(con);
                 }
@@ -91,7 +93,7 @@ Nat aed2_SimCity::nivel(Casilla c) const {
                 }
             }
         } else {
-            if(distanciaManhatan(get<0>(con), c) < 3 && !get<2>(con)){
+            if(distanciaManhatan(get<0>(con), c) <= 3 && !get<2>(con)){
                 if (maxNivelDistancia3 < get<1>(con)){
                     maxNivelDistancia3 = get<1>(con);
                 }
@@ -100,10 +102,10 @@ Nat aed2_SimCity::nivel(Casilla c) const {
     }
 
     Nat res = 0;
-    if (maxCasa != 0){
+    if (hayCasa){
         res = maxCasa;
     } else {
-        if (maxNivelDistancia3 != 0){
+        if (maxNivelDistancia3 > maxComercio){
             res = maxNivelDistancia3;
         } else {
             res = maxComercio;
