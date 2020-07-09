@@ -116,6 +116,12 @@ Nat aed2_SimCity::nivel(Casilla c) const {
     return res;
 }
 
-void aed2_SimCity::unir(aed2_SimCity sc) {}
+void aed2_SimCity::unir(aed2_SimCity sc) {
+    _mapa.unirMapa(sc.mapa());
+    construcciones.insert(construcciones.end(), sc.construcciones.begin(), sc.construcciones.end());
+    turnoActual = max(turnoActual, sc.turnoActual);
+    huboConstr = huboConstr || sc.huboConstruccion();
+    cantidadUniones = cantidadUniones + sc.cantidadUniones + 1;
+}
 
 
