@@ -19,9 +19,15 @@ void aed2_SimCity::agregarComercio(Casilla c) {
 }
 
 void aed2_SimCity::avanzarTurno() {
+    list<tuple<Casilla, Nat, bool>> nuevaCons;
     for(tuple<Casilla, Nat, bool> con: construcciones) {
-        get<1>(con)++;
+        Nat nivelNuevo = get<1>(con) + 1;
+        tuple<Casilla, Nat, bool> nuevoElem(get<0>(con), nivelNuevo, get<2>(con));
+        nuevaCons.push_back(nuevoElem);
     }
+
+    construcciones.clear();
+    construcciones = nuevaCons;
     turnoActual++;
     huboConstr = false;
 }
@@ -70,9 +76,9 @@ set<Casilla> aed2_SimCity::comercios() const {
 }
 
 Nat aed2_SimCity::nivel(Casilla c) const {
-    int maxNivelDistancia3 = -1;
-    int maxCasa = -1;
-    int maxComercio = -1;
+    Nat maxNivelDistancia3 = 0;
+    Nat maxCasa = 0;
+    Nat maxComercio = 0;
     for(tuple<Casilla, Nat, bool> con : construcciones){
         if (get<0>(con) == c){
             if (!get<2>(con)){
@@ -94,10 +100,10 @@ Nat aed2_SimCity::nivel(Casilla c) const {
     }
 
     Nat res = 0;
-    if (maxCasa != -1){
+    if (maxCasa != 0){
         res = maxCasa;
     } else {
-        if (maxNivelDistancia3 != -1){
+        if (maxNivelDistancia3 != 0){
             res = maxNivelDistancia3;
         } else {
             res = maxComercio;
